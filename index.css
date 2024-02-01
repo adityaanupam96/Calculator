@@ -1,0 +1,233 @@
+/* s2 */
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+/* s3 */
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Nanum+Gothic&display=swap');
+/* s1 */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Nanum+Gothic&display=swap');
+/* display */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Nanum+Gothic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-color: black;
+    overflow: hidden;
+
+    min-height: 100vh;
+    min-width: 100vw;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    /* margin: 0 auto; */
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+
+}
+
+.calc {
+    height: 80vh;
+    width: 60vw;
+    /* background-color: cadetblue; */
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.display {
+    grid-column-start: 1;
+    grid-column-end: 6;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: rgba(162, 227, 255, 0.163);
+    color: whitesmoke;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 4rem;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    word-wrap: break-word;
+    /* overflow: hidden; */
+    overflow: scroll;
+}
+
+.display::-webkit-scrollbar {
+    display: none;
+}
+
+.display::selection {
+    color: rgb(162, 255, 173);;
+    background: rgba(50, 217, 150, 0.25) ;
+  }
+
+.display p {
+    margin-right: 5%;
+}
+
+.functions {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    background-color: #aeaeae31;
+    border-radius: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
+
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.item {
+    cursor: pointer;
+    /* border: 1px solid rgb(49, 57, 55); */
+    color: rgb(162, 255, 173);
+    /* color: rgb(255, 0, 230); */
+    border-radius: 8px;
+    /* border-radius: ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    /* color: rgb(0, 255, 30); */
+    transition-duration: 0.3s;
+
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.s1 {
+    font-family: "Martel Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.s2 {
+    background-color: rgba(0, 255, 30, 0.034);
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.s2:hover {
+    background-color: rgba(0, 255, 30, 0.154);
+
+}
+
+.s3 {
+    background-color: rgba(50, 217, 150, 0.25) !important;
+    font-family: "Martel Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-color: rgba(116, 255, 220, 0);
+    /* transition-duration:border-color 300ms !important; */
+}
+
+.s3:hover {
+    border-color: rgba(82, 252, 102, 0.391) !important;
+    border: 1px solid;
+}
+
+.back {
+    color: rgb(255, 124, 124);
+}
+
+.dropdown {
+    color: rgb(255, 255, 146);
+    /* color: rgb(255, 187, 0); */
+}
+
+.item p {
+    transition-duration: 0.2s;
+
+    height: 100%;
+    width: 100%;
+}
+
+.item p:hover {
+    transform: scale(1.5);
+}
+
+#func {
+    border: 3px solid rgba(56, 56, 56, 0);
+    border-radius: 0px;
+}
+
+.clear {
+    color: rgb(142, 255, 251);
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie,
+.inv,
+.sin,
+.cos,
+.tan,
+.pie,
+.inv,
+.log10,
+.asin,
+.acos,
+.atan,
+.expp,
+.sq,
+.tenSq {
+
+    display: none;
+    background-color: #aeaeae31;
+}
+
+.plus,
+.minus,
+.multi,
+.divide,
+.e,
+.exppp,
+.sqrt,
+.log {
+    background-color: #15ff0016;
+}
+
+@media(max-width:768px) {
+    .calc {
+        height: 80vh;
+        width: 90vw;
+    }
+
+    .item p:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media(max-width:425px) {
+    .display {
+        font-size: 3rem;
+    }
+}

@@ -162,6 +162,7 @@ function e() {
     codeString += "e"
     dispBuilder()
     enableDot()
+    enableDMP()
 }
 
 function log() {
@@ -337,7 +338,7 @@ function dispBuilder() {
     displayString = codeString.replaceAll("e", "e")
     displayString = displayString.replaceAll("l", "ln(")
     displayString = displayString.replaceAll("p", "^")
-    displayString = displayString.replaceAll("]", "√")
+    displayString = displayString.replaceAll("]", "√(")
     displayString = displayString.replaceAll("[", "sin(")
     displayString = displayString.replaceAll("c", "cos(")
     displayString = displayString.replaceAll("&", "tan(")
